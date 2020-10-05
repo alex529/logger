@@ -86,7 +86,7 @@ namespace LogComponentTest
 
             moq.Verify(w => w.Write(It.IsAny<string>()), Times.Exactly(maxLine));
             moq.Verify(w => w.Flush(), Times.Once);
-            Assert.Contains($"{text}:{maxLine - 1}", buffer);//check if the last log was appendend
+            Assert.Contains($"{text}:{maxLine - 1}", buffer);//check if the last log was appended
         }
 
         [Fact]
@@ -109,6 +109,5 @@ namespace LogComponentTest
             moq.Verify(w => w.Flush(), Times.Never);
             Assert.DoesNotContain($"{text}:{maxLine - 1}", buffer);//check if the last log is not appended
         }
-
     }
 }

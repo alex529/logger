@@ -10,7 +10,7 @@ namespace LogComponentTest
         [Fact]
         public void Constructor_CreateFolderIfNotExistent()
         {
-            var tempPath = Path.Join(Path.GetTempPath(), $"Constructor_CreateFolderIfNotExistent");
+            var tempPath = Path.Join(Path.GetTempPath(), "Constructor_CreateFolderIfNotExistent");
 
             Assert.False(Directory.Exists(tempPath));
             new FileWriter(tempPath, "test");
@@ -61,7 +61,7 @@ namespace LogComponentTest
             var tempPath = Path.Join(Path.GetTempPath(), "Write_Header");
             var fr = new FileWriter(tempPath, "test")
             {
-                Header = "awsome header"
+                Header = "awesome header"
             };
             const string log = "log this";
 

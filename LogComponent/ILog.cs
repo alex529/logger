@@ -3,12 +3,12 @@
     public interface ILog
     {
         /// <summary>
-        /// Stop the logging. If any outstadning logs theses will not be written to Log
+        /// Stop the logging. If any outstanding logs theses will not be written to Log
         /// </summary>
         void StopWithoutFlush();
 
         /// <summary>
-        /// Stop the logging. The call will not return until all all logs have been written to Log.
+        /// Stop the logging. The call will not return until all logs have been written to Log.
         /// </summary>
         void StopWithFlush();
 
@@ -17,7 +17,5 @@
         /// </summary>
         /// <param name="text">The text to written to the log</param>
         void Write(string text);
-
-
     }
 }
